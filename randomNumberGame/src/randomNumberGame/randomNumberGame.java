@@ -6,10 +6,11 @@ public class randomNumberGame
 	{
 		public static void main(String[] args)
 			{
-				boolean userPlaying = true;
-				while (userPlaying)
+				boolean userPlaying;
+				Scanner userInput = new Scanner (System.in);
+				do
 				{
-					Scanner userInput = new Scanner (System.in);
+					
 					
 					System.out.println("What's your name?");
 					String userName = userInput.nextLine();
@@ -40,7 +41,7 @@ public class randomNumberGame
 						int secretNumber = (int)(Math.random() * numberRange) + 1;
 						System.out.println(secretNumber);
 						System.out.println("Now try to guess the number.");
-							while (userGuessing = true) 
+							do
 							{
 								int userGuess = userInput.nextInt();
 								
@@ -57,28 +58,34 @@ public class randomNumberGame
 								else if (userGuess == secretNumber) 
 								{
 										numberGuesses ++;
-										System.out.println("Congradulations! It only took you " + numberGuesses +  " tries. " + "Would you like to play again? Press 1 for yes or press 2 for no.");
+										System.out.println("Congradulations! It only took you " + numberGuesses +  " tries. ");
 										userGuessing = false;
 								}
 								else 
 								{
 										System.out.println("Please follow the intructions.");
 								}
+							
+								System.out.println("Would you like to play again?" );
+								System.out.println("Press 1 for yes or press 2 for no.");
 								
-									
 								int userPlayAgain = userInput.nextInt();
-								if (userPlayAgain == 2) 
+								if (userPlayAgain == 1) 
 								{
-										System.out.println("Thanks for playing! Hope you come back again.");
-										userPlaying = false;
+									userPlaying = true;
 								}
 								else 
 								{
-										userPlaying = true;
-								}
-								
-							}
-					}	
+									userPlaying = false;
+									System.out.println("Thanks for playing! Hope you come back again.");
+								}	
+							} while (userGuessing == true);	
+							
+							 
+					} while (userPlaying = true);
+					
+							
 				}
+		
 			}
 	
