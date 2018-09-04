@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class randomNumberGame
 	{
+		static boolean userGuessing;
 		public static void main(String[] args)
 			{
 				boolean userPlaying;
@@ -23,7 +24,7 @@ public class randomNumberGame
 						
 						int userDifficulty = userInput.nextInt();
 						int numberGuesses = 0;
-						boolean userGuessing;
+						
 						
 							int numberRange;
 							if (userDifficulty == 1)
