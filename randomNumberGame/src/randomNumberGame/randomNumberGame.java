@@ -71,15 +71,16 @@ public class randomNumberGame
 								System.out.println("Press 1 for yes or press 2 for no.");
 								
 								int userPlayAgain = userInput.nextInt();
-								if (userPlayAgain == 1) 
-								{
-									userPlaying = true;
-								}
-								else 
-								{
-									userPlaying = false;
-									System.out.println("Thanks for playing! Hope you come back again.");
-								}	
+								userPlaying = userPlayAgain == 1 ?true :false;
+//								if (userPlayAgain == 1) 
+//								{
+//									userPlaying = true;
+//								}
+//								else 
+//								{
+//									userPlaying = false;
+//									System.out.println("Thanks for playing! Hope you come back again.");
+//								}	
 							} while (userGuessing == true);	
 							
 							 
